@@ -1,0 +1,21 @@
+body {
+    margin: 0 10px;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    .person {
+        width: calc(33.33% - 20px);
+        margin: 0 10px 20px 0;
+    }
+    h4 {
+        line-height: 30px;
+        font-size: 18px;
+        background-color: antiquewhite;
+    }
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        background-color: #defad7;
+    }
+}
