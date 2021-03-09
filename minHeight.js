@@ -1,4 +1,10 @@
 const select = document.getElementById('select')
+const demo = document.getElementById('demo')
+
+demo.addEventListener('click', () => {
+    demo.classList.remove('demo')
+})
+
 select.value = localStorage.getItem('select-elements-in-row') || 3
 
 document.querySelectorAll('.person').forEach(div => {
@@ -9,6 +15,8 @@ select.addEventListener('change', event => {
     localStorage.setItem('select-elements-in-row', event.target.value)
     location.reload()
 })
+
+// Min-heighter
 
 function adjustElementHeight(elemOrder, elemsInRow, styleClass) {
     const listEl = document.querySelectorAll(styleClass)

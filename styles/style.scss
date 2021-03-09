@@ -22,32 +22,6 @@ body {
         margin: 0 10px 20px 0;
         border-radius: 10px;
         z-index: 2;
-        &:first-child {
-            &:before {
-                content: '';
-                position: absolute;
-                height: 112%;
-                width: 106%;
-                top: -8%;
-                left: -3%;
-                background-color: #4be6d5;
-                border-radius: 10px;
-                border-top-right-radius: 0;
-                z-index: -1;
-            }
-            &:after {
-                content: 'person';
-                position: absolute;
-                top: -30px;
-                right: -3%;
-                color: #fff;
-                font-size: 18px;
-                background-color: #4be6d5;
-                padding: 0 5px;
-                border-top-right-radius: 12px;
-                border-top-left-radius: 12px;
-            }
-        }
     }
     h4 {
         line-height: 30px;
@@ -63,6 +37,39 @@ body {
         font-size: 12px;
         @media (min-width: 1024px) {
             font-size: 15px;
+        }
+    }
+}
+.demo {
+    &:first-child {
+        transition: 0.3s all;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 112%;
+            width: 106%;
+            top: -8%;
+            left: -3%;
+            background-color: #4be6d5;
+            border-radius: 10px;
+            border-top-right-radius: 0;
+            z-index: -1;
+        }
+        &:after {
+            content: 'person';
+            position: absolute;
+            top: -30px;
+            right: -3%;
+            color: #fff;
+            font-size: 18px;
+            background-color: #4be6d5;
+            padding: 0 10px;
+            border-top-right-radius: 12px;
+            border-top-left-radius: 12px;
+        }
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
         }
     }
 }

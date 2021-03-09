@@ -34,32 +34,6 @@ body {
   z-index: 2;
 }
 
-.list .person:first-child:before {
-  content: '';
-  position: absolute;
-  height: 112%;
-  width: 106%;
-  top: -8%;
-  left: -3%;
-  background-color: #4be6d5;
-  border-radius: 10px;
-  border-top-right-radius: 0;
-  z-index: -1;
-}
-
-.list .person:first-child:after {
-  content: 'person';
-  position: absolute;
-  top: -30px;
-  right: -3%;
-  color: #fff;
-  font-size: 18px;
-  background-color: #4be6d5;
-  padding: 0 5px;
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
-}
-
 .list h4 {
   line-height: 30px;
   font-size: 18px;
@@ -80,6 +54,42 @@ body {
   .list a {
     font-size: 15px;
   }
+}
+
+.demo:first-child {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.demo:first-child:before {
+  content: '';
+  position: absolute;
+  height: 112%;
+  width: 106%;
+  top: -8%;
+  left: -3%;
+  background-color: #4be6d5;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  z-index: -1;
+}
+
+.demo:first-child:after {
+  content: 'person';
+  position: absolute;
+  top: -30px;
+  right: -3%;
+  color: #fff;
+  font-size: 18px;
+  background-color: #4be6d5;
+  padding: 0 10px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+.demo:first-child:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 .developer {
