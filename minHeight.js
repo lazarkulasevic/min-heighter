@@ -2,7 +2,7 @@ const select = document.getElementById('select')
 select.value = localStorage.getItem('select-elements-in-row') || 3
 
 document.querySelectorAll('.person').forEach(div => {
-    div.style.width = 90 / select.value + '%'
+    div.style.width = 92 / select.value + '%'
 })
 
 select.addEventListener('change', event => {

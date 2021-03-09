@@ -5,20 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Min-heighter</title>
+    <meta property="og:title" content="Min-heighter">
+    <meta property="og:url" content="https://lazarkulasevic.github.io/min-heighter">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="JavaScript algorithm for setting 'min-height' to all elements in one row based on the most voluminous one.">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-light">
     <div class="container">
-        <select class="custom-select custom-select-lg mt-4" id="select">
+        <h1 class="title pt-4">Min-heighter</h1>
+    </div>
+    <div class="container">
+        <h2 class="pt-4">Select the number of columns</h2>
+        <select class="custom-select custom-select-lg mt-4 mb-4" id="select">
             <option value="2">2</option>
             <option value="3" selected>3</option>
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
+        <p>
+            Alignment can sometimes be troubling, especially when you need to align all text elements within a <b>flexbox</b>,
+            but the number of siblings isn't equal for each parent. For example, some <code>person</code>'s have two and the other
+            three children, so you can't use <code>flex-grow</code> to align everything. Try it through <code>768-1920px</code> width range. (Styled primarily for 768px breakpoint.)
+        </p>
+        <p>
+            I will leave you the <a href="https://lazarkulasevic.github.io/min-heighter/">link to my repo</a>, so feel free to use the <b>min-heighter</b> algorithm in your project.
+        </p>
     </div>
-    <section>
-        <h2 class="mb-4 mt-4">First list</h2>
+    <div class="container bg-white mt-4">
+        <h2 class="mb-4 pt-2">First list</h2>
         <div class="list">
             <div class="person">
                 <h4>Executive Director</h4>
@@ -47,9 +63,9 @@
                 <p>Edmond Brammer</p>
             </div>
         </div>
-    </section>
-    <section>
-        <h2 class="mb-4 mt-4">Second list</h2>
+    </div>
+    <div class="container bg-white mt-4">
+        <h2 class="mb-4 pt-2">Second list</h2>
         <div class="list">
             <div class="person">
                 <h4>Executive Director</h4>
@@ -86,7 +102,13 @@
                 <p>Marcelina Fransen</p>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="alert alert-secondary mt-2 notice" role="alert">
+        This page works only on devices with a <b>width</b> greater than 767px.
+    </div>
+    <p class="developer">
+        Created with <span>&hearts;</span> by <a href="https://github.com/lazarkulasevic">Lazar Kulasevic</a>.
+    </p>
     <script src="minHeight.js"></script>
 </body>
 </html>
