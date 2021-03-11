@@ -38,9 +38,11 @@ body {
   line-height: 30px;
   font-size: 18px;
   background-color: #eaffef;
+  padding: 0 5px;
 }
 
 .list p {
+  padding: 0 5px;
   font-size: 18px;
   line-height: 26px;
   background-color: #d7faf4;
@@ -90,6 +92,16 @@ body {
 .demo:first-child:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+
+@media (min-width: 950px) {
+  .demo:first-child:before {
+    width: 103%;
+    left: -1.5%;
+  }
+  .demo:first-child:after {
+    right: -1.5%;
+  }
 }
 
 .developer {
