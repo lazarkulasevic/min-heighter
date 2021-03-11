@@ -52,7 +52,7 @@ function adjustElementHeight(elemOrder, elemsInRow, styleClass) {
             if (maxLines > 1) {
                 for (let i = start; i < (listLength - remainder) / divider; i++) {
                     let elem = team.children[i].children[elemOrder]
-                    elem.style.height = lineHeight * maxLines + 'px'
+                    elem.style.minHeight = lineHeight * maxLines + 'px'
                 }
                 maxLines = 0
                 lineHeight = 1
