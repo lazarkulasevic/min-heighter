@@ -1,23 +1,4 @@
-const select = document.getElementById('select')
-const demo = document.getElementById('demo')
-
-demo.addEventListener('click', () => {
-    demo.classList.remove('demo')
-})
-
-select.value = localStorage.getItem('select-elements-in-row') || 3
-
-document.querySelectorAll('.person').forEach(div => {
-    div.style.width = 92 / select.value + '%'
-})
-
-select.addEventListener('change', event => {
-    localStorage.setItem('select-elements-in-row', event.target.value)
-    location.reload()
-})
-
-// Min-heighter
-
+// Min-heighter algorithm
 function adjustElementHeight(elemOrder, elemsInRow, styleClass) {
     const listEl = document.querySelectorAll(styleClass)
     listEl.forEach(team => {
@@ -66,8 +47,6 @@ function adjustElementHeight(elemOrder, elemsInRow, styleClass) {
         // teamChunk(6,     1,      0) // third chunk     8        6 and 7
     })
 }
-adjustElementHeight(0, select.value, '.list') // adjusts h4 in .person
-adjustElementHeight(1, select.value, '.list') // adjusts p in .person
 
 // EXAMPLE for adjusting whatever element in teamlist
 //

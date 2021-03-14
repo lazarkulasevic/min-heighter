@@ -1,6 +1,77 @@
 body {
     margin: 0 10px;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    font-weight: 600;
+    font-size: 16px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .slider {
+            background-color: #1ba3c5;
+
+            &::before {
+                transform: translateX(84px);
+            }
+
+            &::after {
+                content: 'Enabled';
+                position: absolute;
+                top: 5px;
+                left: -64px;
+                color: #fff;
+                transform: translateX(84px);
+            }
+        }
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: transform .4s ease;
+        border-radius: 34px;
+        overflow: hidden;
+
+        &::before {
+            position: absolute;
+            content: '';
+            height: 28px;
+            width: 28px;
+            left: 4px;
+            top: 4px;
+            background-color: white;
+            // transition: transform .4s;
+            border-radius: 50%;
+        }
+
+        &::after {
+            content: 'Disabled';
+            position: absolute;
+            top: 5px;
+            right: 16px;
+            color: #343a40;
+            // transition: transform .4s;
+            transform: translateX(0);
+        }
+    }
+}
 .notice {
     display: none;
 }
